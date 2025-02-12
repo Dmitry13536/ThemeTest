@@ -2,7 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # Измени на твою главную ветку
+    branches: [ main ]
+
+permissions:
+  contents: write 
 
 jobs:
   build:
@@ -15,9 +18,9 @@ jobs:
         with:
           node-version: 16
       - name: Install Dependencies
-        run: npm install # Или yarn install, если вы используете Yarn
+        run: npm install
       - name: Build
-        run: npm run build # Или yarn build
+        run: npm run build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
