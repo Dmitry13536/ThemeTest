@@ -1,0 +1,50 @@
+$fontstatck: Helvetica;
+$primiryColor : #333;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.mybutton{
+    border-radius: 88px;
+    width: 318px;
+    height: 150px;
+    border: none;
+    position: relative;
+}
+
+.mybutton__background{
+    border-radius: 88px;
+    background-image: linear-gradient(#88E8FC 78%, #0DBE51) ;
+    width: 100%;
+    height: 100%;
+}
+
+.mybutton__background.dark{
+    background-image: linear-gradient(#202A2C 78%, #5B625E);
+}
+
+.mybutton__circle {
+    // padding: 5px;
+    background-image: radial-gradient(circle, #FFEA08, #E8FD6E);
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: auto;
+    transform: translate(4%, -50%);
+    transition: left 0.3s ease; /* Анимируем свойство left */
+}
+
+.mybutton__circle.dark {
+    background-image: radial-gradient(circle, #628E89, #BEF9FD);
+    left: auto;
+    right: 0;
+    transform: translate(-4%, -50%);
+    transition: right 0.3s ease; /* Анимируем свойство right */
+}
+
