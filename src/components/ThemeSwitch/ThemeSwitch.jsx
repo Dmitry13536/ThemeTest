@@ -6,12 +6,16 @@ import { toggleTheme } from '../../features/theme';
 function ThemeSwitch() {
     const dispatch = useDispatch();
     const theme = useSelector(state => state.theme.isDark);
+    const paragraph = document.querySelectorAll('p');
 
     useEffect(
         ()=>{
             if(!theme){
-            document.body.classList.add('dark')}
-            else{document.body.classList.remove('dark')}
+            document.body.classList.add('dark');
+            paragraph.forEach(parg =>{parg.classList.add('dark')})}
+            else{document.body.classList.remove('dark');
+                paragraph.forEach(parg =>{parg.classList.remove('dark')})
+            }
         },[theme]
     )
 

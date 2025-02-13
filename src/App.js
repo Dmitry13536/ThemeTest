@@ -1,6 +1,7 @@
 import './App.css';
 import Spin from './components/Spin/Spin';
 import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
+import SomeText from './components/SomeText/SomeText';
 
 function App() {
   
@@ -10,6 +11,8 @@ function App() {
       <Spin />
       <br />
       <ThemeSwitch />
+      <br />
+      <SomeText />
     </div>
   );
 }
